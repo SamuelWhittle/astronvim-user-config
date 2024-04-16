@@ -31,7 +31,11 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    [",rename"] = { 
+      "gg0<c-v>GI\"<Esc>gg$<c-v>G$A\" <Esc>gg0<c-v>G$ygg0P<Esc>gg0<c-v>GImv <Esc>",
+      desc = "Rename everything" 
+    }
   },
   t = {
     -- setting a mapping to false will disable it
